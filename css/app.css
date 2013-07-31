@@ -1,0 +1,45 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.vict {
+margin: 100px auto ;
+display: block;
+height: 250px;
+width: 90%;
+font-size: 100px;
+}
+
+ul.ready{
+display: block;
+margin: auto;
+width: 400px;
+list-style: none;
+}
+
+ul.notready {
+display:none;
+}
+
+li.used1{
+	text-decoration:line-through;
+}
+
+.modal {
+  width: 80%;
+  height: 80%;
+  left:10px;
+  padding: 19px 29px 29px;
+  margin-left: 10%;
+  background-color: #0ff;
+  border: 1px solid #e5e5e5;
+}
+
+
+.modal #victim{
+font-size: 100px;
+line-height: 110px;
+font-weight: bold;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html ng-app="App" ng-controller="AppCtrl">
+
+  <head>
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+	
+	
+  </head>
+
+  <body>
+	<!-- input type="button" ng-click="onButton1Click()" value="Choose Your Victim">
+	<br / -->
+
+<ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+</ul>
+
+
+	<button type="button" class="btn btn-large btn-primary ng-scope vict" 
+			bs-modal="'partials/overlay.html'" 
+			ng-click="getAvails()"
+			data-toggle="modal">CHOOSE YOUR VICTIM</button>
+			
+	<ul ng-class="ulclass" class="notready">
+	  <li ng-repeat="phone in phones" 
+	  class="used{{phone.used}}" >
+		  <span ng-click="updateUser($index)">{{phone.name}}</span>
+		  
+		  <!-- add logic to change display based on used value -->      
+		  <span class="used">Used? </span>  
+		  <button type="button" class="btn btn-small btn-primary ng-scope"  
+			ng-click="updateUserClear($index)" >{{phone.used}}</button>
+		</li>
+	</ul>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+	
+	
+    <!--script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="http://firebase.github.io/angularFire/angularFire.js"></script-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.2/angular-strap.min.js"></script>
+    <script src="js/controllers.js"></script>
+
+  </body>
+</html>
